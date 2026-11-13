@@ -1,0 +1,189 @@
+/* app/styles/dashboard.module.css */
+.dashboardContainer {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.statsSummary {
+  display: flex;
+  gap: 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-left: 4px solid #4f46e5;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alertCard {
+  border-left-color: #f59e0b;
+}
+
+.warningCard {
+  border-left-color: #ef4444;
+}
+
+.dangerCard {
+  border-left-color: #10b981;
+}
+
+.cardIcon {
+  background: #f3f4f6;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+}
+
+.alertCard .cardIcon {
+  color: #f59e0b;
+  background: #fef3c7;
+}
+
+.warningCard .cardIcon {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+.dangerCard .cardIcon {
+  color: #10b981;
+  background: #d1fae5;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardContent h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+}
+
+.cardLink {
+  font-size: 0.85rem;
+  color: #4f46e5;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.liveFeeds {
+  margin-top: 2rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.sectionIcon {
+  margin-right: 0.75rem;
+  color: #4f46e5;
+}
+
+.cameraGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.cameraCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.cameraCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cameraFrame {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.cameraFrame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cameraInfo {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+}
+
+.cameraInfo span {
+  font-weight: 500;
+}
+
+.statusIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}

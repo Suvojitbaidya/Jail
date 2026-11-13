@@ -1,0 +1,70 @@
+.identification-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.identification-card:hover {
+    transform: translateY(-5px);
+}
+
+.person-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.id-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 123, 255, 0.9);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.id-details {
+    padding: 20px;
+}
+
+.id-field {
+    margin-bottom: 10px;
+}
+
+.id-label {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.id-value {
+    font-size: 1.05rem;
+}
+
+.verification-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.verified {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.unverified {
+    background-color: #fff3cd;
+    color: #856404;
+}

@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "6585646c-1439-4c6f-94c6-d1868d4f271f",
+		"name": "jail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8244517",
+		"_collection_link": "https://warped-zodiac-696172.postman.co/workspace/Team-Workspace~2af84413-bcf8-4bd6-8c1f-a6e9b0c80c36/collection/8244517-6585646c-1439-4c6f-94c6-d1868d4f271f?action=share&source=collection_link&creator=8244517"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "puspendu.developer@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get camera list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDcwNDgzMjYsImV4cCI6MTc0NzY1MzEyNn0.t3JDAVYwatgTZuiM6zgSP2dY4emNlAMGqfB8KEoQS8g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/cameras",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"cameras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Camera",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDcwNDgzMjYsImV4cCI6MTc0NzY1MzEyNn0.t3JDAVYwatgTZuiM6zgSP2dY4emNlAMGqfB8KEoQS8g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cam1\",\n    \"location\": \"wallside\",\n    \"type\" : \"link\",\n    \"status\": \"active\",\n    \"heightThreshold\": 5,\n    \"alertThreshold\":6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/cameras",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"cameras"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

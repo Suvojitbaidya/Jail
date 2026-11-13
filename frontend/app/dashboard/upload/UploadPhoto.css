@@ -1,0 +1,283 @@
+:root {
+    --primary-green: #2e7d32;
+    --light-green: #e8f5e9;
+    --medium-green: #81c784;
+    --dark-green: #1b5e20;
+    --error-red: #d32f2f;
+}
+
+.upload_photo_main {
+    padding: 2rem 0;
+    /* background-color: #f5f5f5; */
+    min-height: 100vh;
+}
+
+.upload-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px #38383833;
+    padding: 2.5rem;
+    max-width: 650px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    border: 1px solid #e4e4e4;
+    margin-top: 30px;
+}
+
+.upload-container:hover {
+    box-shadow: 0 15px 35px rgba(46, 125, 50, 0.3);
+}
+
+.upload-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-green);
+}
+
+.upload-header i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.upload-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.upload-area {
+    border: 3px dashed var(--medium-green);
+    border-radius: 12px;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: var(--light-green);
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-green);
+    background-color: rgba(129, 199, 132, 0.1);
+}
+
+.upload-area.drag-active {
+    border-color: var(--primary-green);
+    background-color: rgba(129, 199, 132, 0.2);
+}
+
+.upload-area.has-file {
+    border-color: var(--primary-green);
+    background-color: rgba(129, 199, 132, 0.1);
+    padding: 1.5rem;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.upload-text {
+    color: var(--dark-green);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.upload-text span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.file-ready {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.change-file {
+    color: var(--medium-green);
+    font-size: 0.85rem;
+}
+
+.preview-container {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 140px;
+    border-radius: 10px;
+    border: 2px solid var(--medium-green);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.file-info {
+    background-color: var(--light-green);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.file-info p {
+    margin-bottom: 0.5rem;
+}
+
+.file-info strong {
+    color: var(--dark-green);
+}
+
+.progress-container {
+    margin: 1.5rem 0;
+    display: none;
+}
+
+.progress-container.visible {
+    display: block;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-green);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.btn-submit {
+    background-color: var(--primary-green);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}
+
+.btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .upload-container {
+        padding: 1.5rem;
+    }
+
+    .upload-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .upload-area {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/*  */
+
+.identification-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.identification-card:hover {
+    transform: translateY(-5px);
+}
+
+.person-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.id-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 123, 255, 0.9);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.id-details {
+    padding: 20px;
+}
+
+.id-field {
+    margin-bottom: 10px;
+}
+
+.id-label {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.id-value {
+    font-size: 1.05rem;
+}
+
+.verification-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.verified {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.unverified {
+    background-color: #fff3cd;
+    color: #856404;
+}

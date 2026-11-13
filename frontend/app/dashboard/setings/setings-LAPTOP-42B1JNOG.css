@@ -1,0 +1,424 @@
+/* Base Styles */
+.alert-settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.alert-settings-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.alert-settings-header h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.alert-settings-header p {
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+/* Settings Card */
+.settings-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.setting-section {
+  margin-bottom: 2.5rem;
+}
+
+.setting-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+}
+
+.section-icon {
+  margin-right: 0.75rem;
+  color: #3498db;
+}
+
+.section-description {
+  color: #7f8c8d;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* Alert Sensitivity */
+.threshold-setting {
+  margin-bottom: 2rem;
+}
+
+.setting-label span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.setting-label small {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.sensitivity-slider {
+  flex-grow: 1;
+  height: 8px;
+  -webkit-appearance: none;
+  background: #ecf0f1;
+  border-radius: 4px;
+  outline: none;
+}
+
+.sensitivity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #3498db;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sensitivity-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #2980b9;
+}
+
+.slider-value {
+  width: 30px;
+  text-align: center;
+  margin-left: 1rem;
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Notification Methods */
+.method-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.method-option {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.method-option:hover {
+  background: #e9ecef;
+}
+
+.method-option.active {
+  background: #e3f2fd;
+  border-color: #bbdefb;
+  color: #1976d2;
+}
+
+.method-icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Email Recipients */
+.recipients-list {
+  margin: 1.5rem 0;
+}
+
+.recipient-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s;
+}
+
+.recipient-item.inactive {
+  opacity: 0.7;
+  background: #f1f1f1;
+}
+
+.view-mode, .edit-mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email-address {
+  flex-grow: 1;
+  font-family: monospace;
+}
+
+.recipient-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-btn, .delete-btn, .toggle-btn, .save-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.edit-btn {
+  color: #3498db;
+}
+
+.edit-btn:hover {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.delete-btn {
+  color: #e74c3c;
+}
+
+.delete-btn:hover {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.toggle-btn {
+  color: #2ecc71;
+  font-size: 1.4rem;
+}
+
+.toggle-off {
+  color: #95a5a6;
+}
+
+.email-input {
+  flex-grow: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.email-input.invalid {
+  border-color: #e74c3c;
+}
+
+.save-btn {
+  color: #2ecc71;
+  margin-left: 0.5rem;
+  border: 1px solid #2ecc71;
+}
+
+.save-btn:hover {
+  background: rgba(46, 204, 113, 0.1);
+  color: #27ae60;
+}
+
+.save-btn:disabled {
+  color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Add Recipient */
+.add-recipient {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+}
+
+.new-email-input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.new-email-input:focus {
+  border-color: #3498db;
+}
+
+.new-email-input.invalid {
+  border-color: #e74c3c;
+}
+
+.add-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0 1.25rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: #2980b9;
+}
+
+.add-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.validation-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0;
+}
+
+/* Action Buttons */
+.settings-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.save-settings, .reset-settings {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-settings {
+  background: #3498db;
+  color: white;
+  border: none;
+}
+
+.save-settings:hover {
+  background: #2980b9;
+}
+
+.reset-settings {
+  background: none;
+  border: 1px solid #bdc3c7;
+  color: #7f8c8d;
+}
+
+.reset-settings:hover {
+  background: #f8f9fa;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.delete-confirmation-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.delete-confirmation-modal h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.delete-confirmation-modal p {
+  margin: 1rem 0 2rem;
+  color: #7f8c8d;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cancel-btn, .confirm-delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-btn {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  color: #7f8c8d;
+}
+
+.cancel-btn:hover {
+  background: #e9ecef;
+}
+
+.confirm-delete-btn {
+  background: #e74c3c;
+  border: 1px solid #e74c3c;
+  color: white;
+}
+
+.confirm-delete-btn:hover {
+  background: #c0392b;
+}
+.add-email-section{
+    display: flex;
+    margin-bottom: 25px;
+}
+.add-email-section .email-input  {
+    flex-grow: 1;
+    border-radius: 6px 0 0 6px;
+}

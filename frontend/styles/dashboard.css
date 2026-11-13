@@ -1,0 +1,158 @@
+:root {
+  --primary-green: #1B5E20;
+  --dark-green: #0d3a13;
+  --light-green: #e8f5e9;
+  --accent-green: #4caf50;
+  --shadow-color: rgba(27, 94, 32, 0.15);
+}
+
+/* Stat Box - Enhanced */
+.stat-box {
+  background: white;
+  border-left: 5px solid var(--primary-green);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow-color);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.stat-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(27, 94, 32, 0.05) 0%, rgba(255,255,255,0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+.stat-box:hover::before {
+  opacity: 1;
+}
+
+.stat-box:active {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.stat-box i {
+  font-size: 2.5rem;
+  color: var(--primary-green);
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.stat-box:hover i {
+  transform: scale(1.1);
+  color: var(--accent-green);
+}
+
+.stat-box .stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  transition: all 0.3s ease;
+  margin: 10px 0;
+}
+
+.stat-box:hover .stat-value {
+  color: var(--dark-green);
+}
+
+.stat-box .stat-label {
+  font-size: 1rem;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover .stat-label {
+  color: #444;
+}
+
+/* Camera Card - Enhanced */
+.camera-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.camera-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(27, 94, 32, 0.1) 0%, rgba(27, 94, 32, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.camera-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(27, 94, 32, 0.2);
+}
+
+.camera-card:hover::after {
+  opacity: 1;
+}
+
+.camera-card iframe {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.camera-card:hover iframe {
+  transform: scale(1.03);
+}
+
+.camera-card .camera-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(27, 94, 32, 0.8);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.camera-card:hover .camera-overlay {
+  transform: translateY(0);
+}
+
+/* Pulse animation for live cameras */
+.camera-card.live::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 12px;
+  height: 12px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  z-index: 2;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 77, 77, 0); }
+}
